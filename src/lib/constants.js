@@ -3,9 +3,9 @@
 export const CHAR_DISP = '角色';
 export const WEAPON_DISP = '光锥';
 
-export const VERSION = '2.3.0';
-export const AUTHOR = 'QiuSYan & Claude';
-export const GITHUB_REPO = 'qiusyan-projects/SR-Gacha';
+export const VERSION = '4.3.0';
+export const AUTHOR = 'QiuSYan & Claude & Deepseek';
+export const GITHUB_REPO = 'qiusyan-projects/SR-Gacha-Web';
 
 export const BANNER_DOWNLOAD_URL =
   'https://raw.gh.qiusyan.top/qiusyan-projects/SR-Gacha/main/banners.yml';
@@ -18,7 +18,6 @@ export const TIPS = [
   '来点Star叭！',
   '这是一个小Tip，只有聪明人才能看到它的内容',
   '可以修改卡池文件来实现其他游戏的抽卡效果',
-  '本来我是想整个主题的，但是好像加上之后会变得很卡我就删了',
   '你看什么看！',
   '双击抽卡记录可以查看物品的详细信息',
   '双击卡池可以查看卡池的信息',
