@@ -12,6 +12,7 @@ import { FiveStarDialog } from '@/components/FiveStarDialog'
 import { SettingsDialog } from '@/components/SettingsDialog'
 import { VersionDialog } from '@/components/VersionDialog'
 import { CustomPoolDialog } from '@/components/CustomPoolDialog'
+import { CollectionDialog } from '@/components/CollectionDialog'
 import { ConfirmDialog } from '@/components/ConfirmDialog'
 
 function MobilePullBar({ gacha }) {
@@ -106,6 +107,7 @@ export default function App() {
       <SettingsDialog open={gacha.settingsOpen} onClose={() => gacha.setSettingsOpen(false)} engine={engine} onSaved={gacha.refresh} />
       <VersionDialog open={gacha.versionOpen} onClose={() => gacha.setVersionOpen(false)} />
       <CustomPoolDialog open={gacha.customPoolOpen} onClose={() => gacha.setCustomPoolOpen(false)} engine={engine} onLoaded={gacha.refresh} />
+      <CollectionDialog open={gacha.collectionOpen} onClose={() => gacha.setCollectionOpen(false)} engine={engine} />
       <ConfirmDialog
         open={!!gacha.confirmAction}
         title={gacha.confirmAction?.title || ''}

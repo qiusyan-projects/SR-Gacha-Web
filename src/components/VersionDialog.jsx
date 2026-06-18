@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, Info } from 'lucide-react'
 import { VERSION, AUTHOR, GITHUB_REPO } from '@/lib/constants'
 
 export function VersionDialog({ open, onClose }) {
@@ -29,7 +29,7 @@ export function VersionDialog({ open, onClose }) {
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-sm">
-        <DialogHeader><DialogTitle>📋 版本信息</DialogTitle></DialogHeader>
+        <DialogHeader><DialogTitle className="flex items-center gap-2"><Info className="w-5 h-5" /> 版本信息</DialogTitle></DialogHeader>
         <div className="text-sm text-muted-foreground space-y-1.5">
           <p>当前版本: <span className="text-foreground font-semibold">{VERSION}</span></p>
           <p>作者: {AUTHOR}</p>

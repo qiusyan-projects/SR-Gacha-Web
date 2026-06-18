@@ -27,6 +27,7 @@ export function useGacha() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [versionOpen, setVersionOpen] = useState(false);
   const [customPoolOpen, setCustomPoolOpen] = useState(false);
+  const [collectionOpen, setCollectionOpen] = useState(false);
   const [confirmAction, setConfirmAction] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [toast, setToast] = useState(null);
@@ -89,6 +90,7 @@ export function useGacha() {
     selectBanner, selectStandard, doPull, currentPity,
     settingsOpen, setSettingsOpen, versionOpen, setVersionOpen,
     customPoolOpen, setCustomPoolOpen,
+    collectionOpen, setCollectionOpen,
     confirmAction, setConfirmAction, refresh,
     mobileMenuOpen, setMobileMenuOpen,
   };

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
+import { ClipboardList, FileText } from 'lucide-react'
 import { BANNER_DOWNLOAD_URL } from '@/lib/constants'
 
 // 示例片段：从 banners.yml 截取一个限时卡池条目的结构
@@ -101,7 +102,7 @@ export function CustomPoolDialog({ open, onClose, engine, onLoaded }) {
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-lg max-h-[85vh] overflow-y-auto">
-        <DialogHeader><DialogTitle>📋 自定卡池</DialogTitle></DialogHeader>
+        <DialogHeader><DialogTitle className="flex items-center gap-2"><ClipboardList className="w-5 h-5" /> 自定卡池</DialogTitle></DialogHeader>
 
         <div className="space-y-3">
           <div>
@@ -117,7 +118,7 @@ export function CustomPoolDialog({ open, onClose, engine, onLoaded }) {
           </div>
 
           <details className="text-xs">
-            <summary className="cursor-pointer text-muted-foreground hover:text-foreground">📝 卡池文件格式说明 (点击展开)</summary>
+            <summary className="cursor-pointer text-muted-foreground hover:text-foreground inline-flex items-center gap-1"><FileText className="w-3.5 h-3.5" /> 卡池文件格式说明 (点击展开)</summary>
             <pre className="mt-2 p-3 rounded-md bg-muted text-muted-foreground overflow-x-auto text-[11px] leading-relaxed whitespace-pre">
               {EXAMPLE}
             </pre>

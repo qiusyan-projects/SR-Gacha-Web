@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 import { Card } from '@/components/ui/card'
-import { Settings, Info, FileInput, Trash2 } from 'lucide-react'
+import { Settings, Info, FileInput, Trash2, Package } from 'lucide-react'
 
 function StandardPoolView({ engine, currentId, onSelect }) {
   const stdId = engine.getStandardBanner()
@@ -60,6 +60,7 @@ function StandardPoolView({ engine, currentId, onSelect }) {
 export function Sidebar({ gacha }) {
   const { engine, currentTab, setCurrentTab, selectBanner, selectStandard, doPull, currentPity, pulling,
     settingsOpen, setSettingsOpen, versionOpen, setVersionOpen, customPoolOpen, setCustomPoolOpen,
+    collectionOpen, setCollectionOpen,
     setConfirmAction, refresh, setMobileMenuOpen } = gacha
 
   const { character, weapon } = engine.categorizeBanners()
@@ -140,6 +141,9 @@ export function Sidebar({ gacha }) {
       <Separator />
 
       <div className="px-4 pb-4 pt-2 space-y-1.5">
+        <Button variant="outline" size="sm" className="w-full text-xs" onClick={() => { setCollectionOpen(true); closeMobile(); }}>
+          <Package className="w-3.5 h-3.5 mr-1" /> 查看收获
+        </Button>
         <div className="flex gap-1.5">
           <Button variant="ghost" size="sm" className="flex-1 text-xs text-muted-foreground" onClick={() => { setSettingsOpen(true); closeMobile(); }}>
             <Settings className="w-3.5 h-3.5 mr-1" /> 概率设置

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
+import { Settings } from 'lucide-react'
 import { DEFAULT_PROBABILITIES } from '@/lib/constants'
 
 // 快速创建 Label + Input 组合 (shadcn/ui 没有自带 Label 和 Input，这里用原生加 tailwind)
@@ -63,7 +64,7 @@ export function SettingsDialog({ open, onClose, engine, onSaved }) {
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-xl max-h-[85vh] overflow-y-auto">
-        <DialogHeader><DialogTitle>⚙️ 概率设置</DialogTitle></DialogHeader>
+        <DialogHeader><DialogTitle className="flex items-center gap-2"><Settings className="w-5 h-5" /> 概率设置</DialogTitle></DialogHeader>
 
         <Tabs value={tab} onValueChange={setTab}>
           <TabsList className="w-full">
